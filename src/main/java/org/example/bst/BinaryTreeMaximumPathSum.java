@@ -1,6 +1,6 @@
 package org.example.bst;
 
-import org.example.bst.util.TreeNode;
+import org.example.util.TreeNode;
 
 import java.util.stream.Stream;
 

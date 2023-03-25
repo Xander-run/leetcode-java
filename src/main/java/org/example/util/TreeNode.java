@@ -1,6 +1,4 @@
-package org.example.bst.util;
-
-import org.example.bst.BalancedBinaryTree;
+package org.example.util;
 
 public class TreeNode {
     public int val;
