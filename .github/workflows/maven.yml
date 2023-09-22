@@ -22,6 +22,6 @@ jobs:
     
     - name: echo
       run: |
-        echo "$REF_NAME"
-        echo "$ARTIFACT_VERSION"
+        echo "REF_NAME: $REF_NAME"
+        echo "ARTIFACT_VERSION: $ARTIFACT_VERSION"
     
