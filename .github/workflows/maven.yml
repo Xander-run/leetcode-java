@@ -1,0 +1,22 @@
+name: test echo
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    env:
+      REF_NAME: ${{ github.ref_name }}
+      ARTIFACT_VERSION: ${REF_NAME#v}
+    steps:
+    - uses: actions/checkout@v3
+    - name: echo
+      run: |
+        echo "$REF_NAME"
+        echo "$ARTIFACT_VERSION"
+    
