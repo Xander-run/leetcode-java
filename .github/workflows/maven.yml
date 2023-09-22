@@ -10,11 +10,15 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    env:
-      REF_NAME: ${{ github.ref_name }}
-      ARTIFACT_VERSION: ${REF_NAME#v}
+      
     steps:
     - uses: actions/checkout@v3
+    
+    - name: get ARTIFACT_VERSION
+      run: |
+        REF_NAME=${{ github.ref_name }}
+        echo "ARTIFACT_VERSION=${REF_NAME#v}" >> $GITHUB_ENV
+    
     - name: echo
       run: |
         echo "$REF_NAME"
